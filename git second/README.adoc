@@ -1,0 +1,62 @@
+= Professionelle Softwareentwicklung: Woche 14
+:icons: font
+:icon-set: fa
+:stem: latexmath
+:source-highlighter: rouge
+:experimental:
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+== Begrüßung und Organisatorisches 
+Schauen Sie sich das https://youtu.be/MNtT2yjkqk8[Begrüßungsvideo] an.
+
+=== Klausuranmeldung
+
+Die Anmeldung zur ersten Klausur ist über das Studierendenportal verfügbar, bitte melden Sie sich möglichst frühzeitig an. Wir möchten Sie außerdem bitten, dass Sie an https://ilias.hhu.de/goto.php?target=svy_1103853&client_id=UniRZ[dieser Ilias Umfrage] teilnehmen. Sie helfen uns dabei, die richtigen Kapazitäten für die Klausur abzuschätzen und nicht übermäßig viele Klausuren zu drucken 🌲🌳. 
+
+=== Impfung
+
+Sie haben es vermutlich schon in der Mail der Rektorin gelesen. Sie können sich ab dem 14.07.2021 in der Zeit von 10 bis 19 Uhr ohne Termin auf dem Campus (Gebäude 24.21, Ebene U1, Raum 64) gegen SARS-CoV2 impfen lassen. Bitte nehmen Sie die Gelegenheit wahr, wenn Sie noch ungeimpft sind und schützen Sie sich und Andere. Weitere Informationen finden Sie auf folgender Seite der https://www.duesseldorf.de/medienportal/pressedienst-einzelansicht/pld/woche-des-impfens-impfen-ohne-termin-in-pop-up-impfstellen-und-im-impfzentrum.html[Stadt Düsseldorf]. Sie benötigen Ihren Personalausweis und Ihren Impfpass.
+
+== Aufgabe 1: Versionsverwaltung mit Git
+
+* Schauen Sie sich das Video zum Thema https://www.youtube.com/watch?v=GvaBKzXmzfg[Git im Detail] an.  
+* Lösen Sie alle Level (Main und Remote) von https://learngitbranching.js.org/[Learn Git Branching].
+* Arbeiten Sie die https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts[Merge Conflict] und https://www.atlassian.com/git/tutorials/rewriting-history[Rewriting history] Tutorials durch.
+* Probieren Sie `diff` und `patch` aus. Sie können dazu das Beispiel im Ordner `diff_patch` verwenden.
+
+*Leitfragen/Aufgaben:*
+
+* Was sind die wesentlichen Unterschiede zwischen zentraler und dezentraler Versionskontrolle?
+
+* "Ein Commit in git kann niemals fehlschlagen" (es sei denn, falls beispielsweise die Festplatte voll oder defekt ist). Warum ist das so? Warum ist das in Subversion nicht so?
+
+* Ändern Sie die Klasse `Hello` aus diff_patch wie folgt:
+** Fügen Sie eine Instanzmethode `greet` hinzu, welche die Nachricht ausgibt und ändern Sie die `main` Methode so ab, dass sie die `greet` Methode benutzt. Fügen Sie außerdem einen Setter für das Attribut hinzu.
+** Nachdem Sie alle Änderungen durchgeführt haben, erzeugen Sie zwei Commits. In einem Commit fügen Sie den Setter hinzu, in dem anderen Commit nehmen Sie die anderen Änderungen vor. 
+** Machen Sie sich nochmal ganz klar, warum es sinnvoll ist, eine Staging Area zu haben.
+
+* Warum bedeutet ein konfliktfreier Merge nicht, dass die Änderung korrekt ist? 
+
+* Können wir wirklich von Hand einen Zyklus in den Commits erzeugen, indem wir die Dateien direkt von Hand ändern? Probieren Sie es aus! Wie haben Sie es geschafft bzw. warum ging es nicht?
+
+* Was bedeutet Squashing und warum ist das nützlich?
+
+* Was sind die Konsequenzen, wenn wir die Git History ändern für einen Branch, der schon gepusht wurde?
+
+* Welche Vor- und Nachteile hat das "Trunk-Based Development"?
+
+* Ein Feature Toggle wird primär beim Trunk Based Development verwendet, um Features, die aufgrund ihrer Komplexität nicht vollständig in ein paar Stunden implementiert werden können, auszuschalten. Die implementierten Teile werden integriert, dabei jedoch im ausgelieferten Produkt ausgeschaltet. Wie würden Sie ein Feature-Toggle in Spring Boot implementieren? Welchen Einfluss hat die Struktur Ihres Codes auf die Implementierung des Toggles?
+
+**Zusatzmaterial:**
+
+- https://github.com/jlord/git-it-electron/releases[Git it!] Ein Lernprogramm für git und GitHub
+- http://git-school.github.io/visualizing-git/[Simulator] für git 
+- https://git-scm.com/book/de/v2[Pro Git] von Chacon und Straub
+- https://ohshitgit.com/de[Oh Shit, Git!?!]: Tipps rund um git Troubleshooting 
+
